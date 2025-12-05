@@ -166,7 +166,7 @@ with st.form("prediction_form"):
     with c3:
         state_input = st.select_slider(
             "State of the property",
-            options=["To restore", "To be renovated", "Normal", "Excellent", "New"],
+            options=["To Restore", "To Renovate", "Good", "Excellent", "New"],
             value="Good"
         )
 
@@ -209,7 +209,7 @@ with st.form("prediction_form"):
 # -----------------------------------------------------------------------------
 if submitted:
     # A. MAPPINGS
-    state_mapping = {'New': 6, 'Excellent': 5, 'Good': 4, 'To Renovate': 2, 'To Restore': 1}
+    state_mapping = {'New': 6, 'Excellent': 5, 'Normal': 4, 'To be renovated': 2, 'To restore': 1}
     state_numeric = state_mapping.get(state_input, 3)
     kitchen_map = {
         "Hyper Equipped": "Super equipped",
@@ -250,6 +250,7 @@ if submitted:
         st.markdown("---")
         c1, c2, c3 = st.columns([1, 2, 1])
         with c2:
+            st.balloons()
             st.markdown(
                 """
                 <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
