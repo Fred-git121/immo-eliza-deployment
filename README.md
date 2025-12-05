@@ -70,13 +70,13 @@ If you want to run this application on your own machine:
 -----
 
 ## 🧠 Model Information
-The underlying model is an XGBoost Regressor trained on a dataset of Belgian real estate properties.
+The underlying model is a XGBoost Regressor trained on a dataset of Belgian real estate properties.
 
 * **Target:** Price (€)
 
 * **Performance:** R 
 2
-  Score ~0.78 (on test set)
+  Score ~0.71 (on test set)
 
 * **Key Features:**
 
