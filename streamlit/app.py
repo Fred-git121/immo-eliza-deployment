@@ -71,7 +71,7 @@ def load_artifacts():
 model, model_features = load_artifacts()
 
 if model is None:
-    st.error("🚨 System Error: Model artifacts not found.")
+    st.error("System Error: Model artifacts not found.")
     st.stop()
 
 
