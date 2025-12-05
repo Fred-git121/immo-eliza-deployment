@@ -9,7 +9,7 @@ import os
 # -----------------------------------------------------------------------------
 st.set_page_config(
     page_title="Immo Eliza | AI Valuation",
-    page_icon="💎",
+    page_icon=":european_post_office:",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
