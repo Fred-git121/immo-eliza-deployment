@@ -70,7 +70,7 @@ If you want to run this application on your own machine:
 -----
 
 ## 🧠 Model Information
-The underlying model is an XGBoost Regressor trained on a dataset of Belgian real estate properties.
+The underlying model is a XGBoost Regressor trained on a dataset of Belgian real estate properties.
 
 * **Target:** Price (€)
 
