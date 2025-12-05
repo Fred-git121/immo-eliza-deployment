@@ -250,7 +250,7 @@ if submitted:
         st.markdown("---")
         c1, c2, c3 = st.columns([1, 2, 1])
         with c2:
-            st.balloons()
+            st.snow()
             st.markdown(
                 """
                 <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
