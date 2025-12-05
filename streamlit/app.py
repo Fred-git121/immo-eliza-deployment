@@ -165,8 +165,8 @@ with st.form("prediction_form"):
 
     with c3:
         state_input = st.select_slider(
-            "Building State",
-            options=["To Restore", "To Renovate", "Good", "Excellent", "New"],
+            "State of the property",
+            options=["To restore", "To be renovated", "Normal", "Excellent", "New"],
             value="Good"
         )
 
