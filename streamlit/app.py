@@ -166,7 +166,7 @@ with st.form("prediction_form"):
     with c3:
         state_input = st.select_slider(
             "State of the property",
-            options=["To restore", "To be renovated", "Normal", "Excellent", "New"],
+            options=["To Restore", "To Renovate", "Good", "Excellent", "New"],
             value="Good"
         )
 
@@ -250,7 +250,7 @@ if submitted:
         st.markdown("---")
         c1, c2, c3 = st.columns([1, 2, 1])
         with c2:
-            st.snow()
+            st.balloons()
             st.markdown(
                 """
                 <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
