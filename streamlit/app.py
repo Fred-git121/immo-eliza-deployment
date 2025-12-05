@@ -149,7 +149,7 @@ st.markdown("""
 # 6. MAIN FORM
 # -----------------------------------------------------------------------------
 with st.form("prediction_form"):
-    st.markdown("##### 📍 Location & Type")
+    st.markdown("##### :round_pushpin: Location & Type")
     c1, c2, c3 = st.columns([1, 1, 2])
 
     with c1:
@@ -172,10 +172,10 @@ with st.form("prediction_form"):
 
     st.markdown("---")
 
-    col_details, col_amenities = st.columns([1, 1])
+    col_details, col_addons = st.columns([1, 1])
 
     with col_details:
-        st.markdown("##### 📏 Specifications")
+        st.markdown("##### :straight_ruler: Specifications")
         with st.container(border=True):
             livable_surface = st.number_input("Livable Surface (m²)", 0, 1000, 150, step=10)
             bedroom_count = st.number_input("Bedrooms", 0, 10, 3)
@@ -186,15 +186,15 @@ with st.form("prediction_form"):
                 horizontal=True
             )
 
-    with col_amenities:
-        st.markdown("##### 🏡 Amenities")
+    with col_addons:
+        st.markdown("##### :house: Add-ons")
         with st.container(border=True):
             col_a, col_b = st.columns(2)
             with col_a:
-                has_garden = st.toggle("🌳 Garden")
-                has_terrace = st.toggle("☀️ Terrace")
+                has_garden = st.toggle(":deciduous_tree: Garden")
+                has_terrace = st.toggle(":sunny: Terrace")
             with col_b:
-                has_pool = st.toggle("🏊 Pool")
+                has_pool = st.toggle(":swimming_man: Pool")
 
             if has_garden:
                 surface_garden = st.number_input("Garden Area (m²)", 0, 5000, 50, step=10)
@@ -202,7 +202,7 @@ with st.form("prediction_form"):
                 surface_garden = 0
 
     st.markdown("<br>", unsafe_allow_html=True)
-    submitted = st.form_submit_button("💰 Calculate Valuation", type="primary")
+    submitted = st.form_submit_button(":moneybag: Calculate Valuation", type="primary")
 
 # -----------------------------------------------------------------------------
 # 7. LOGIC
