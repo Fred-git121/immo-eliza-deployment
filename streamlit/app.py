@@ -251,29 +251,29 @@ if submitted:
         c1, c2, c3 = st.columns([1, 2, 1])
         with c2:
             #st.balloons()
-            st.markdown(
-                """
-                <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
-                    <h3 style="margin:0; color: #333;">Estimated Market Value</h3>
-                </div>
-                """, unsafe_allow_html=True
-            )
+            # st.markdown(
+            #     """
+            #     <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
+            #         <h3 style="margin:0; color: #333;">Estimated Market Value</h3>
+            #     </div>
+            #     """, unsafe_allow_html=True
+            # )
             st.metric(label="", value=f"€ {prediction:,.2f}")
             st.info(f"Estimate for a **{state_input}** **{type_label}** in **{prov}**.")
 
-        # E. SMARTER DEBUGGER
-        with st.expander("🕵️ Debug: Check Inputs"):
-            st.write(f"Raw Type sent to model: **{raw_type_value}**")
-
-            # Identify active type column
-            type_cols = [c for c in final_df.columns if "type" in c.lower() and final_df[c].iloc[0] == 1]
-
-            if type_cols:
-                st.success(f"✅ Active Feature: {type_cols[0]}")
-            else:
-                # If "Apartment" is the reference, NO column will be active. This is good!
-                st.info(
-                    f"ℹ️ No active type column. This is correct if **'{raw_type_value}'** is your Reference Category (baseline).")
+        # # E. SMARTER DEBUGGER
+        # with st.expander("🕵️ Debug: Check Inputs"):
+        #     st.write(f"Raw Type sent to model: **{raw_type_value}**")
+        #
+        #     # Identify active type column
+        #     type_cols = [c for c in final_df.columns if "type" in c.lower() and final_df[c].iloc[0] == 1]
+        #
+        #     if type_cols:
+        #         st.success(f"✅ Active Feature: {type_cols[0]}")
+        #     else:
+        #         # If "Apartment" is the reference, NO column will be active. This is good!
+        #         st.info(
+        #             f"ℹ️ No active type column. This is correct if **'{raw_type_value}'** is your Reference Category (baseline).")
 
     except Exception as e:
         st.error(f"Prediction Error: {e}")
