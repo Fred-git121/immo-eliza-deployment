@@ -140,7 +140,7 @@ st.markdown("""
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     color: white;
 ">
-    <h1 style="color: white; margin: 0; font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Immo Eliza Valuation</h1>
+    <h1 style="color: white; margin: 0; font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Immo Eliza Real Estate Price Predictor</h1>
     <p style="color: #ddd; margin-top: 10px; font-size: 1.2rem; font-weight: 300;">Premium AI-Powered Real Estate Estimator</p>
 </div>
 """, unsafe_allow_html=True)
@@ -166,7 +166,7 @@ with st.form("prediction_form"):
     with c3:
         state_input = st.select_slider(
             "State of the property",
-            options=["To restore", "To be renovated", "Normal", "Excellent", "New"],
+            options=["To Restore", "To Renovate", "Good", "Excellent", "New"],
             value="Good"
         )
 
