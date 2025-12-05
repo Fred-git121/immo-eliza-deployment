@@ -76,7 +76,7 @@ The underlying model is a XGBoost Regressor trained on a dataset of Belgian real
 
 * **Performance:** R 
 2
-  Score ~0.78 (on test set)
+  Score ~0.71 (on test set)
 
 * **Key Features:**
 
